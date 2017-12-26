@@ -16,7 +16,7 @@ exports.location = function (config, callback) {
     delete config.latitude;
     delete config.longitude;
     delete config.key;
-    var address = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude+'key='+key;
+    var address = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude+'&key='+key;
 
     delete config.map;
     //build interface address
