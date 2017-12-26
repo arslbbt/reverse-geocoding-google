@@ -1,8 +1,8 @@
 /*global JSON,Buffer,require,exports*/
 'use strict';
 var http = require('https'),
-    url = require('url'),
-    querystring = require('querystring');
+url = require('url'),
+querystring = require('querystring');
 exports.location = function (config, callback) {
     if (!config || !callback) {
         throw new Error('Invalid arguments number.');
@@ -12,9 +12,9 @@ exports.location = function (config, callback) {
         throw new Error('key not found.');
     }
     var latitude = config.latitude,
-        longitude = config.longitude,
-        key = config.key,
-        map = config.map;
+    longitude = config.longitude,
+    key = config.key,
+    map = config.map;
     delete config.latitude;
     delete config.longitude;
     delete config.key;
