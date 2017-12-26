@@ -1,6 +1,6 @@
 /*global JSON,Buffer,require,exports*/
 'use strict';
-var http = require('http'),
+var http = require('https'),
     url = require('url'),
     querystring = require('querystring');
 exports.location = function (config, callback) {
@@ -8,6 +8,8 @@ exports.location = function (config, callback) {
         throw new Error('Invalid arguments number.');
     } else if (!config.latitude || !config.longitude) {
         throw new Error('Latitude or Longitude not found.');
+    }else if (!config.key) {
+        throw new Error('key not found.');
     }
     var latitude = config.latitude,
         longitude = config.longitude,
@@ -16,7 +18,7 @@ exports.location = function (config, callback) {
     delete config.latitude;
     delete config.longitude;
     delete config.key;
-    var address = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude+'&key='+key;
+    var address = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude+'&key='+key;
 
     delete config.map;
     //build interface address
