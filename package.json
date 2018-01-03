@@ -1,6 +1,6 @@
 {
   "name": "reverse-geocoding-google",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "reverse-geocoding-google you can add google api keys",
   "main": "index.js",
   "scripts": {
